@@ -36,26 +36,30 @@ Ai-Expert проверяет проектную документацию пер�
 
 ## Пример проверки
 
-В приложение загружен [PDF с планом и экспликацией](examples/live-demo/office-plan.pdf). У помещения № 12 на плане указано **18,00 м²**, в таблице — **20,00 м²**. Проверка нашла это расхождение и приложила обе надписи.
+Перед подачей важно убедиться, что документы одного объекта не противоречат друг другу. В демонстрационный комплект загружены план офиса с экспликацией и спецификация дверей. Проверка нашла три расхождения:
 
-<img src="assets/screenshots/03-finding.png" alt="Экран Ai-Expert: замечание о расхождении площади помещения № 12 и два источника" width="100%">
+| Что сравнивается | Что найдено |
+| --- | --- |
+| Площадь помещения № 12 | На плане 18 м², в экспликации 20 м² |
+| Итог экспликации | Сумма строк 72 м², указанный итог 75 м² |
+| Двери ДВ1 | В спецификации 3 шт., на плане две маркировки — нужно сверить |
 
-После выбора значения из экспликации приложение сохранило [исправленный PDF](examples/live-demo/office-plan-corrected.pdf) и проверило его повторно. Это расхождение больше не обнаружено; исходный файл остался в истории.
+<img src="assets/submission-check/02-area-detail.png" alt="Настоящее замечание Ai-Expert: площадь одного помещения отличается на плане и в экспликации" width="640">
+
+У каждого замечания есть объяснение и ссылки на исходные страницы. Можно открыть нужное место, сверить данные и исправить документы.
 
 <table>
   <tr>
-    <td width="50%"><strong>Исходный лист и найденные надписи</strong><a href="assets/screenshots/04-source.png"><img src="assets/screenshots/04-source.png" alt="Просмотр PDF с отметками источников замечания"></a></td>
-    <td width="50%"><strong>Выбор значения для исправления</strong><a href="assets/screenshots/08-correction-choice.png"><img src="assets/screenshots/08-correction-choice.png" alt="Выбор площади 20,00 м² из экспликации"></a></td>
-  </tr>
-  <tr>
-    <td width="50%"><strong>Документ загружен и прочитан</strong><a href="assets/screenshots/02-documents.png"><img src="assets/screenshots/02-documents.png" alt="Загруженный документ в Ai-Expert"></a></td>
-    <td width="50%"><strong>Результат повторной сверки</strong><a href="assets/screenshots/06-corrected.png"><img src="assets/screenshots/06-corrected.png" alt="Повторная проверка: площади совпадают, открытых замечаний нет"></a></td>
+    <td width="50%"><strong>Итог таблицы</strong><a href="assets/submission-check/04-total-detail.png"><img src="assets/submission-check/04-total-detail.png" alt="Замечание о сумме строк 72 м² и итоге 75 м²"></a></td>
+    <td width="50%"><strong>План и спецификация</strong><a href="assets/submission-check/06-doors-detail.png"><img src="assets/submission-check/06-doors-detail.png" alt="Сверка количества ДВ1 в спецификации с маркировками на плане"></a></td>
   </tr>
 </table>
 
-Это снимки работающего приложения на вымышленном офисном плане. В этом прогоне выполнены числовые проверки площадей и итогов таблицы.
+После загрузки исправленной редакции повторная проверка больше не обнаружила эти три расхождения. Предыдущие версии документов остались в истории; результаты доступны в PDF и Excel.
 
-[Все экраны и последовательность действий](docs/demo.md) · [PDF-отчёт](examples/live-demo/check-report.pdf) · [Excel-отчёт](examples/live-demo/check-report.xlsx) · [Результаты прогона](examples/live-demo/run-result.json)
+Это реальные экраны приложения на вымышленных документах. В примере показаны числовые проверки площадей, итогов таблицы и маркировок дверей.
+
+[Посмотреть весь процесс со скриншотами](docs/submission-check.md) · [PDF-отчёт](examples/submission-check/check-report.pdf) · [Excel-отчёт](examples/submission-check/check-report.xlsx) · [Исходные документы](examples/submission-check/initial) · [Автоматическая правка площади](docs/demo.md)
 
 ## Как это устроено
 
