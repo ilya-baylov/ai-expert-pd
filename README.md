@@ -1,2 +1,9 @@
-# psd-bot
-AI-assisted review of project documentation
+# PSD Bot
+
+AI-assisted review of project documentation, available through Telegram.
+
+Инструмент помогает предварительно проверять проектную документацию: сопоставляет сведения из разных файлов и связывает замечания с исходными страницами.
+
+[Открыть бота в Telegram](https://t.me/aiexpertproject_bot)
+
+Этот репозиторий — публичная страница проекта. Исходный код, рабочая база и пользовательские документы сюда не включены.
