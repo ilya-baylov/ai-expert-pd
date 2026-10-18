@@ -36,11 +36,26 @@ Ai-Expert проверяет проектную документацию пер�
 
 ## Пример проверки
 
-На плане у помещения № 12 указано **18,0 м²**, в экспликации — **20,0 м²**. Такое расхождение стоит разобрать до подачи комплекта. Бот показывает оба значения и листы, на которых их нашёл.
+В приложение загружен [PDF с планом и экспликацией](examples/live-demo/office-plan.pdf). У помещения № 12 на плане указано **18,00 м²**, в таблице — **20,00 м²**. Проверка нашла это расхождение и приложила обе надписи.
 
-<img src="assets/review-example.svg" alt="Демонстрационный пример: площадь помещения на плане и в экспликации отличается на 2 квадратных метра" width="100%">
+<img src="assets/screenshots/03-finding.png" alt="Экран Ai-Expert: замечание о расхождении площади помещения № 12 и два источника" width="100%">
 
-Числа в примере вымышлены. [Разбор и файлы примера](docs/example-review.md).
+После выбора значения из экспликации приложение сохранило [исправленный PDF](examples/live-demo/office-plan-corrected.pdf) и проверило его повторно. Это расхождение больше не обнаружено; исходный файл остался в истории.
+
+<table>
+  <tr>
+    <td width="50%"><strong>Исходный лист и найденные надписи</strong><a href="assets/screenshots/04-source.png"><img src="assets/screenshots/04-source.png" alt="Просмотр PDF с отметками источников замечания"></a></td>
+    <td width="50%"><strong>Выбор значения для исправления</strong><a href="assets/screenshots/08-correction-choice.png"><img src="assets/screenshots/08-correction-choice.png" alt="Выбор площади 20,00 м² из экспликации"></a></td>
+  </tr>
+  <tr>
+    <td width="50%"><strong>Документ загружен и прочитан</strong><a href="assets/screenshots/02-documents.png"><img src="assets/screenshots/02-documents.png" alt="Загруженный документ в Ai-Expert"></a></td>
+    <td width="50%"><strong>Результат повторной сверки</strong><a href="assets/screenshots/06-corrected.png"><img src="assets/screenshots/06-corrected.png" alt="Повторная проверка: площади совпадают, открытых замечаний нет"></a></td>
+  </tr>
+</table>
+
+Это снимки работающего приложения на вымышленном офисном плане. В этом прогоне выполнены числовые проверки площадей и итогов таблицы.
+
+[Все экраны и последовательность действий](docs/demo.md) · [PDF-отчёт](examples/live-demo/check-report.pdf) · [Excel-отчёт](examples/live-demo/check-report.xlsx) · [Результаты прогона](examples/live-demo/run-result.json)
 
 ## Как это устроено
 

@@ -1,3 +1,5 @@
-document,page,room,area_m2
-План этажа,2,12,18.0
-Экспликация помещений,3,12,20.0
+document,page,origin,room,area_m2
+office-plan.pdf,1,plan,12,18.0
+office-plan.pdf,1,schedule,12,20.0
+office-plan.pdf,1,plan,13,12.0
+office-plan.pdf,1,schedule,13,12.0
